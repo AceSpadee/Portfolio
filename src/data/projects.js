@@ -22,18 +22,18 @@ const projects = [
     githubLink: "https://github.com/AceSpadee/ambient-loader",
     projectDetails: {
       overview:
-        "Rooftop Cat is a fast-paced endless runner inspired by the Chrome dinosaur game, reimagined with a neon rooftop setting and a more stylized browser-based presentation.",
+        "Rooftop Cat is a fast-paced endless runner inspired by the Chrome dinosaur game, but reimagined with a neon rooftop style and a little more personality in how it looks and feels.",
       goal:
-        "The goal was to build a simple but polished arcade-style game that felt quick, responsive, and visually distinct while staying easy to pick up and play in the browser.",
+        "I built this to make a simple arcade-style game that felt quick, responsive, and fun to play in the browser while still having its own visual identity.",
       challenges: [
         "Balancing obstacle timing so the gameplay felt challenging without becoming frustrating",
-        "Creating a visual style that made the rooftop setting feel clear and consistent",
+        "Creating a rooftop visual style that stayed clear and readable during fast gameplay",
         "Keeping movement, collisions, and pacing responsive in a browser environment",
       ],
       learned: [
-        "How to structure a browser-based gameplay loop for repeatable arcade-style play",
-        "How timing, spacing, and visual clarity affect the feel of a game",
-        "How small gameplay and animation changes can noticeably improve the overall experience",
+        "I got a much better feel for how browser-based game loops need to be structured to stay smooth and repeatable",
+        "Timing, spacing, and visual clarity ended up mattering a lot more than I expected for making the game feel good to play",
+        "Even small changes to gameplay and animation made a noticeable difference in the overall experience",
       ],
     },
   },
@@ -54,18 +54,18 @@ const projects = [
     liveLink: "https://music-player-s59b.onrender.com",
     projectDetails: {
       overview:
-        "This music app was built to create a smoother, more interactive listening experience with playlist management, playback features, and a polished frontend interface.",
+        "This music app started as a way to build a smoother, more interactive listening experience, with a big focus on playlists, playback, and UI behavior that felt polished.",
       goal:
-        "The goal was to build a music application that felt modern and responsive while supporting more advanced playlist behavior than a basic media or CRUD interface.",
+        "I wanted to create a music app that felt more modern and enjoyable to use than a basic player, especially in the way playlists, controls, and interactions worked together.",
       challenges: [
         "Handling drag-and-drop interactions in a way that felt smooth and intuitive",
-        "Managing dropdown menu behavior without flicker or awkward state changes",
+        "Managing dropdown menu behavior without flicker, jumping, or awkward closing",
         "Keeping playback controls, playlist logic, and UI state organized as the app grew",
       ],
       learned: [
-        "How to break larger interface systems into smaller reusable React components",
-        "How to manage more complex UI state across interactive features",
-        "How refined interface behavior can make a project feel significantly more polished",
+        "I got more comfortable breaking larger interfaces into smaller reusable React components",
+        "Interactive UI needs much more careful state management once behavior starts getting more complex",
+        "Small interface details made a bigger difference than expected in how polished the app felt",
       ],
     },
   },
@@ -85,18 +85,18 @@ const projects = [
     ],
     projectDetails: {
       overview:
-        "This application was built to let authenticated users save locations, view them visually on a map, and track movement history through an interactive full-stack interface.",
+        "This project was built around saving locations, showing them on a map, and tracking movement over time through a full-stack app with a more interactive feel.",
       goal:
-        "The goal was to combine mapping, authentication, and stored path data into a practical full-stack project centered around location-based functionality.",
+        "I wanted to combine authentication, mapping, and movement tracking into one project that felt practical to use while also pushing me to work through more complex full-stack functionality.",
       challenges: [
-        "Structuring location and movement data clearly in the backend",
-        "Displaying saved markers and movement paths in a way that stayed readable on the map",
-        "Balancing live tracking behavior with storage and performance considerations",
+        "Structuring saved locations, movement sessions, and user data clearly in the backend",
+        "Balancing real-time movement tracking with storage efficiency and map performance",
+        "Displaying markers and session-based paths in a way that stayed readable and organized",
       ],
       learned: [
-        "How to connect geolocation-based frontend behavior to backend storage",
-        "How to organize full-stack data around user activity and movement history",
-        "How map rendering and movement tracking introduce performance and structure challenges",
+        "I learned a lot about connecting geolocation features on the frontend to backend data storage in a practical way",
+        "This project gave me more experience organizing user activity, saved locations, and movement history in one system",
+        "Map-based features and live tracking introduced performance and structure challenges earlier than I expected",
       ],
     },
   },
@@ -116,18 +116,18 @@ const projects = [
     ],
     projectDetails: {
       overview:
-        "This project is a self-hosted cloud storage platform designed to manage uploads, organize files, and support a custom file-handling workflow through the web.",
+        "This project is a self-hosted cloud storage platform focused on file uploads, organization, and building a custom file workflow through the web instead of relying completely on outside services.",
       goal:
-        "The goal was to explore building a storage-focused platform with a custom frontend and backend architecture instead of relying entirely on third-party services.",
+        "I built this because I wanted to explore how a storage-focused app would work with my own frontend and backend setup, especially when thinking about file handling, scalability, and self-hosted architecture.",
       challenges: [
-        "Planning for larger file uploads and long-term storage performance",
-        "Designing a clean interface for browsing, organizing, and managing files",
-        "Thinking through how the storage architecture should scale over time",
+        "Planning how file uploads and storage should be structured for larger files and long-term scalability",
+        "Deciding what data belonged in the database versus the file system itself",
+        "Designing a file management interface that stayed clear and usable as storage needs grew",
       ],
       learned: [
-        "How storage-heavy applications require different planning than standard CRUD apps",
-        "How backend file workflows directly affect frontend design decisions",
-        "How self-hosted systems introduce performance, architecture, and scalability tradeoffs",
+        "I learned that file-based apps need a different kind of planning than more typical database-driven projects",
+        "It gave me a better understanding of how backend file handling decisions shape the frontend experience",
+        "Working through a self-hosted setup brought in bigger questions around storage, scalability, and performance",
       ],
     },
   },
