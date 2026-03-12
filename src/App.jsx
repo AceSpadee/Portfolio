@@ -129,7 +129,7 @@ function App() {
         <div className="section-heading">
           <h2>Projects</h2>
           <p>
-            A mix of public work, live previews, and private case studies that
+            A mix of public work, live previews, and private projects that
             show both frontend and full-stack development experience.
           </p>
         </div>
@@ -172,7 +172,7 @@ function App() {
               rel="noreferrer"
             >
               <span className="contact-label">GitHub</span>
-              <span className="contact-value">https://github.com/AceSpadee</span>
+              <span className="contact-value">github.com/AceSpadee</span>
             </a>
           </div>
         </div>

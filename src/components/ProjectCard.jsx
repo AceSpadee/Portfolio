@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ProjectCaseStudy from "./ProjectCaseStudy";
+import ProjectDetails from "./ProjectDetails";
 
 function ProjectCard({ project, onImageClick }) {
   const {
@@ -12,13 +12,13 @@ function ProjectCard({ project, onImageClick }) {
     highlights,
     liveLink,
     githubLink,
-    caseStudy,
+    projectDetails,
   } = project;
 
-  const [showCaseStudy, setShowCaseStudy] = useState(false);
+  const [showProjectDetails, setShowProjectDetails] = useState(false);
 
-  const toggleCaseStudy = () => {
-    setShowCaseStudy((prev) => !prev);
+  const toggleProjectDetails = () => {
+    setShowProjectDetails((prev) => !prev);
   };
 
   return (
@@ -80,18 +80,18 @@ function ProjectCard({ project, onImageClick }) {
           </a>
         )}
 
-        {caseStudy && (
+        {projectDetails && (
           <button
             type="button"
             className="project-link secondary project-button"
-            onClick={toggleCaseStudy}
+            onClick={toggleProjectDetails}
           >
-            {showCaseStudy ? "Hide Case Study" : "Case Study"}
+            {showProjectDetails ? "Hide Details" : "Project Details"}
           </button>
         )}
       </div>
 
-      {showCaseStudy && <ProjectCaseStudy caseStudy={caseStudy} />}
+      {showProjectDetails && <ProjectDetails projectDetails={projectDetails} />}
     </article>
   );
 }

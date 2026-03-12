@@ -1,19 +1,19 @@
-function ProjectCaseStudy({ caseStudy }) {
-  const { overview, goal, challenges, learned } = caseStudy;
+function ProjectDetails({ projectDetails }) {
+  const { overview, goal, challenges, learned } = projectDetails;
 
   return (
-    <div className="project-case-study">
-      <div className="case-study-section">
+    <div className="project-details">
+      <div className="project-details-section">
         <h4>Overview</h4>
         <p>{overview}</p>
       </div>
 
-      <div className="case-study-section">
+      <div className="project-details-section">
         <h4>Goal</h4>
         <p>{goal}</p>
       </div>
 
-      <div className="case-study-section">
+      <div className="project-details-section">
         <h4>Technical Challenges</h4>
         <ul>
           {challenges.map((item) => (
@@ -22,7 +22,7 @@ function ProjectCaseStudy({ caseStudy }) {
         </ul>
       </div>
 
-      <div className="case-study-section">
+      <div className="project-details-section">
         <h4>What I Learned</h4>
         <ul>
           {learned.map((item) => (
@@ -34,4 +34,4 @@ function ProjectCaseStudy({ caseStudy }) {
   );
 }
 
-export default ProjectCaseStudy;
+export default ProjectDetails;

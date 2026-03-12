@@ -465,7 +465,7 @@ a {
   font: inherit;
 }
 
-.project-case-study {
+.project-details {
   margin-top: 8px;
   padding-top: 18px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -474,19 +474,19 @@ a {
   gap: 18px;
 }
 
-.case-study-section h4 {
+.project-details-section h4 {
   font-size: 1rem;
   margin-bottom: 8px;
   color: #7dd3fc;
 }
 
-.case-study-section p,
-.case-study-section li {
+.project-details-section p,
+.project-details-section li {
   color: #cbd5e1;
   line-height: 1.7;
 }
 
-.case-study-section ul {
+.project-details-section ul {
   padding-left: 18px;
 }
 
