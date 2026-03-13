@@ -43,10 +43,10 @@ function App() {
           <div className="hero-content">
             <span className="hero-eyebrow">Full-Stack Developer</span>
             <h1>Hi, I’m Peyton Iverson</h1>
-            <h2>Building modern web apps and interactive digital experiences</h2>
+            <h2>I build modern web apps with a focus on interaction, polish, and real functionality</h2>
             <p>
-              I create responsive websites, polished user interfaces, and full-stack
-              applications using React, Node.js, MongoDB, and JavaScript.
+              I enjoy creating responsive websites, interactive user interfaces,
+              and full-stack projects using React, Node.js, MongoDB, and JavaScript.
             </p>
 
             <div className="hero-buttons">
@@ -86,18 +86,18 @@ function App() {
           <div className="about-text">
             <h2>About Me</h2>
             <p>
-              I’m a full-stack developer focused on building modern web apps,
-              interactive interfaces, and polished user experiences. I enjoy
+              I’m a full-stack developer who enjoys building modern web apps,
+              interactive interfaces, and polished user experiences. I like
               creating projects that combine clean design with real functionality,
-              whether that means developing responsive frontend layouts, building
-              full-stack systems, or refining how an application feels to use.
+              whether that means building responsive frontend layouts, working
+              through full-stack features, or refining how an app feels to use.
             </p>
             <p>
               A lot of my work centers around React, JavaScript, Node.js, and
               MongoDB, with a strong interest in frontend interaction and overall
-              project structure. I like taking an idea from concept to a real
-              product and improving both the technical side and the experience
-              users have with it.
+              project structure. I enjoy taking an idea from concept to a working
+              product and improving both the technical side and the user experience
+              along the way.
             </p>
           </div>
 
@@ -129,8 +129,8 @@ function App() {
         <div className="section-heading">
           <h2>Projects</h2>
           <p>
-            A mix of public work, live previews, and private projects that
-            show both frontend and full-stack development experience.
+            A mix of public work, live previews, and private projects that reflect
+            both my frontend focus and full-stack development experience.
           </p>
         </div>
 
@@ -150,9 +150,8 @@ function App() {
           <div className="contact-text">
             <h2>Contact</h2>
             <p>
-              I’m always interested in new opportunities, projects, and
-              collaborations. Feel free to reach out or connect with me through the
-              links below.
+              I’m always open to new opportunities, projects, and collaborations.
+              Feel free to reach out or connect with me through the links below.
             </p>
           </div>
 
@@ -172,7 +171,7 @@ function App() {
               rel="noreferrer"
             >
               <span className="contact-label">GitHub</span>
-              <span className="contact-value">github.com/AceSpadee</span>
+              <span className="contact-value">https://github.com/AceSpadee</span>
             </a>
           </div>
         </div>

@@ -86,7 +86,7 @@ function ProjectCard({ project, onImageClick }) {
             className="project-link secondary project-button"
             onClick={toggleProjectDetails}
           >
-            {showProjectDetails ? "Hide Details" : "Project Details"}
+            {showProjectDetails ? "Hide Details" : "More About This Project"}
           </button>
         )}
       </div>
