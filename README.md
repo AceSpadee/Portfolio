@@ -1,16 +1,16 @@
-# Peyton Portfolio
+# Peyton's Portfolio
 
-A personal portfolio website built to showcase my projects, development focus, and contact information.
+This is my personal portfolio website, built to showcase the kinds of projects I enjoy making, how I approach development, and where to find me.
 
 ## Overview
 
-This portfolio highlights:
-- who I am as a developer
-- the types of projects I build
-- featured work with previews and case studies
-- ways to get in contact with me
+I built this portfolio to have one place that reflects both my frontend focus and my full-stack development experience. It highlights the kinds of projects I like working on, gives a better sense of how I build, and makes it easy to explore my work.
 
-The site includes a modern hero section, an about section, a projects section with thumbnails and expandable case studies, and a contact section.
+The site includes:
+- a hero section with my core stack and focus
+- an about section with more context on how I approach development
+- a projects section with previews and expandable project details
+- a contact section for getting in touch
 
 ## Built With
 
@@ -22,14 +22,29 @@ The site includes a modern hero section, an about section, a projects section wi
 ## Features
 
 - responsive portfolio layout
-- featured project cards
-- clickable project thumbnails with lightbox modal
-- expandable case study details
-- contact links for email, GitHub, and LinkedIn
+- project cards with preview thumbnails
+- clickable images with a lightbox modal
+- expandable project details for each project
+- contact links for email and GitHub
 
-## Projects Featured
+## Featured Projects
 
-- Rooftop Cat
-- Music App
-- Location Tracking App
-- Cloud Storage App
+### Rooftop Cat
+![Rooftop Cat Preview](./src/assets/rooftopcat-thumb.png)
+
+A fast-paced rooftop endless runner inspired by the Chrome dinosaur game, built with a neon visual style and browser-based gameplay.
+
+### Music App
+![Music App Preview](./src/assets/musicapp-thumb.png)
+
+A modern music app focused on playlist management, playback controls, and polished UI interactions.
+
+### Location Tracking App
+![Location Tracking App Preview](./src/assets/locationapp-thumb.png)
+
+A full-stack location tracking app that lets users save locations, view them on an interactive map, and track movement over time.
+
+### Cloud Storage App
+![Cloud Storage App Preview](./src/assets/cloudstorage-thumb.png)
+
+A self-hosted cloud storage platform built around file uploads, organization, and custom file handling through the web.
