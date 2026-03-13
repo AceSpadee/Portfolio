@@ -2,6 +2,8 @@
 
 This is my personal portfolio website, built to showcase the kinds of projects I enjoy making, how I approach development, and where to find me.
 
+[Live Link](https://portfolio-using-react-azat.onrender.com)
+
 ## Overview
 
 I built this portfolio to have one place that reflects both my frontend focus and my full-stack development experience. It highlights the kinds of projects I like working on, gives a better sense of how I build, and makes it easy to explore my work.
