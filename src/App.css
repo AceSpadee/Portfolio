@@ -807,6 +807,37 @@ a,
 }
 
 /* =========================
+   Reveal Animations
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance, 24px));
+  transition:
+    opacity var(--reveal-duration, 700ms) ease,
+    transform var(--reveal-duration, 700ms) ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal > * {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* =========================
    Animations
 ========================= */
 @keyframes fadeIn {
