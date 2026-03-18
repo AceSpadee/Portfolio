@@ -1,9 +1,19 @@
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import ImageLightbox from "../components/ImageLightbox";
 import projects from "../data/projects";
 
 function ProjectPage() {
   const { slug } = useParams();
   const project = projects.find((item) => item.slug === slug);
+
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [lightboxImageIndex, setLightboxImageIndex] = useState(null);
+
+  useEffect(() => {
+    setSelectedImageIndex(0);
+    setLightboxImageIndex(null);
+  }, [slug]);
 
   if (!project) {
     return (
@@ -32,7 +42,37 @@ function ProjectPage() {
     projectDetails,
   } = project;
 
-  const extraImages = images.length > 1 ? images : [];
+  const galleryImages =
+    images.length > 0
+      ? images
+      : [
+          {
+            src: image,
+            alt: title,
+          },
+        ];
+
+  const selectedImage = galleryImages[selectedImageIndex];
+
+  const openLightbox = (index) => {
+    setLightboxImageIndex(index);
+  };
+
+  const closeLightbox = () => {
+    setLightboxImageIndex(null);
+  };
+
+  const showPrevImage = () => {
+    setLightboxImageIndex((prev) =>
+      prev === 0 ? galleryImages.length - 1 : prev - 1
+    );
+  };
+
+  const showNextImage = () => {
+    setLightboxImageIndex((prev) =>
+      prev === galleryImages.length - 1 ? 0 : prev + 1
+    );
+  };
 
   return (
     <div className="site">
@@ -47,8 +87,43 @@ function ProjectPage() {
 
       <section className="section project-page">
         <div className="project-page-hero">
-          <div className="project-page-image-wrapper">
-            <img className="project-page-image" src={image} alt={title} />
+          <div className="project-page-image-column">
+            <button
+              type="button"
+              className="project-page-main-image-button"
+              onClick={() => openLightbox(selectedImageIndex)}
+              aria-label={`Expand image for ${title}`}
+            >
+              <div className="project-page-image-wrapper">
+                <img
+                  className="project-page-image"
+                  src={selectedImage.src}
+                  alt={selectedImage.alt}
+                />
+              </div>
+            </button>
+
+            {galleryImages.length > 1 && (
+              <div className="project-page-thumbnails">
+                {galleryImages.map((item, index) => (
+                  <button
+                    key={`${item.alt}-${index}`}
+                    type="button"
+                    className={`project-page-thumbnail-button ${
+                      selectedImageIndex === index ? "active" : ""
+                    }`}
+                    onClick={() => setSelectedImageIndex(index)}
+                    aria-label={`View screenshot ${index + 1} for ${title}`}
+                  >
+                    <img
+                      className="project-page-thumbnail-image"
+                      src={item.src}
+                      alt={item.alt}
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="project-page-intro">
@@ -90,18 +165,24 @@ function ProjectPage() {
           </div>
         </div>
 
-        {extraImages.length > 0 && (
+        {galleryImages.length > 1 && (
           <div className="project-page-section">
             <h2>Screenshots</h2>
             <div className="project-gallery">
-              {extraImages.map((item, index) => (
-                <div className="project-gallery-item" key={`${item.alt}-${index}`}>
+              {galleryImages.map((item, index) => (
+                <button
+                  type="button"
+                  className="project-gallery-item"
+                  key={`${item.alt}-${index}`}
+                  onClick={() => openLightbox(index)}
+                  aria-label={`Open screenshot ${index + 1} for ${title}`}
+                >
                   <img
                     className="project-gallery-image"
                     src={item.src}
                     alt={item.alt}
                   />
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -146,6 +227,17 @@ function ProjectPage() {
           </div>
         </div>
       </section>
+
+      {lightboxImageIndex !== null && (
+        <ImageLightbox
+          images={galleryImages}
+          projectTitle={title}
+          activeIndex={lightboxImageIndex}
+          onClose={closeLightbox}
+          onPrev={showPrevImage}
+          onNext={showNextImage}
+        />
+      )}
     </div>
   );
 }

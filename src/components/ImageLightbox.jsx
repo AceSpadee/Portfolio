@@ -1,7 +1,15 @@
 import { useEffect } from "react";
 
-function ImageLightbox({ projects, activeIndex, onClose, onPrev, onNext }) {
-  const activeProject = projects[activeIndex];
+function ImageLightbox({
+  images,
+  projectTitle,
+  activeIndex,
+  onClose,
+  onPrev,
+  onNext,
+  showNavigation = false,
+}) {
+  const activeImage = images?.[activeIndex];
 
   useEffect(() => {
     const handleKeyDown = (event) => {
@@ -19,7 +27,9 @@ function ImageLightbox({ projects, activeIndex, onClose, onPrev, onNext }) {
     };
   }, [onClose, onPrev, onNext]);
 
-  if (!activeProject) return null;
+  if (!images || !images.length || !activeImage) return null;
+
+  const showNav = showNavigation || images.length > 1;
 
   return (
     <div
@@ -27,7 +37,7 @@ function ImageLightbox({ projects, activeIndex, onClose, onPrev, onNext }) {
       onClick={onClose}
       role="dialog"
       aria-modal="true"
-      aria-label={`${activeProject.title} expanded image`}
+      aria-label={`${projectTitle} expanded image`}
     >
       <div
         className="image-modal-content"
@@ -42,33 +52,42 @@ function ImageLightbox({ projects, activeIndex, onClose, onPrev, onNext }) {
           ×
         </button>
 
-        <button
-          type="button"
-          className="image-modal-nav image-modal-nav-left"
-          onClick={onPrev}
-          aria-label="Previous project image"
-        >
-          ‹
-        </button>
+        {showNav && (
+          <>
+            <button
+              type="button"
+              className="image-modal-nav image-modal-nav-left"
+              onClick={onPrev}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
 
-        <button
-          type="button"
-          className="image-modal-nav image-modal-nav-right"
-          onClick={onNext}
-          aria-label="Next project image"
-        >
-          ›
-        </button>
+            <button
+              type="button"
+              className="image-modal-nav image-modal-nav-right"
+              onClick={onNext}
+              aria-label="Next image"
+            >
+              ›
+            </button>
+          </>
+        )}
 
         <img
           className="image-modal-img"
-          src={activeProject.image}
-          alt={activeProject.alt}
+          src={activeImage.src}
+          alt={activeImage.alt}
         />
 
         <div className="image-modal-caption">
-          <h4>{activeProject.title}</h4>
-          <p>{activeProject.alt}</p>
+          <h4>{projectTitle}</h4>
+          <p>{activeImage.alt}</p>
+          {images.length > 1 && (
+            <span className="image-modal-counter">
+              {activeIndex + 1} / {images.length}
+            </span>
+          )}
         </div>
       </div>
     </div>

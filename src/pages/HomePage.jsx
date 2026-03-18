@@ -1,33 +1,35 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import ProjectCard from "../components/ProjectCard";
 import ImageLightbox from "../components/ImageLightbox";
 import Reveal from "../components/Reveal";
 import projects from "../data/projects";
 
 function HomePage() {
-  const [activeImageIndex, setActiveImageIndex] = useState(null);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(null);
   const [activeSection, setActiveSection] = useState("about");
 
   const openImageModal = (index) => {
-    setActiveImageIndex(index);
+    setActiveProjectIndex(index);
   };
 
   const closeImageModal = () => {
-    setActiveImageIndex(null);
+    setActiveProjectIndex(null);
   };
 
   const showPrevImage = () => {
-    setActiveImageIndex((prev) =>
+    setActiveProjectIndex((prev) =>
       prev === 0 ? projects.length - 1 : prev - 1
     );
   };
 
   const showNextImage = () => {
-    setActiveImageIndex((prev) =>
+    setActiveProjectIndex((prev) =>
       prev === projects.length - 1 ? 0 : prev + 1
     );
   };
+
+  const activeProject =
+    activeProjectIndex !== null ? projects[activeProjectIndex] : null;
 
   useEffect(() => {
     const sectionIds = ["about", "projects", "contact"];
@@ -242,13 +244,20 @@ function HomePage() {
         <p>© 2026 Peyton Iverson. All rights reserved.</p>
       </footer>
 
-      {activeImageIndex !== null && (
+      {activeProject && (
         <ImageLightbox
-          projects={projects}
-          activeIndex={activeImageIndex}
+          images={[
+            {
+              src: activeProject.image,
+              alt: activeProject.alt,
+            },
+          ]}
+          projectTitle={activeProject.title}
+          activeIndex={0}
           onClose={closeImageModal}
           onPrev={showPrevImage}
           onNext={showNextImage}
+          showNavigation={true}
         />
       )}
     </div>
