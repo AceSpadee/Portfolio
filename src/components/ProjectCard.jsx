@@ -1,9 +1,9 @@
-import { useState } from "react";
-import ProjectDetails from "./ProjectDetails";
+import { Link } from "react-router-dom";
 
 function ProjectCard({ project, onImageClick }) {
   const {
     title,
+    slug,
     status,
     image,
     alt,
@@ -12,14 +12,7 @@ function ProjectCard({ project, onImageClick }) {
     highlights,
     liveLink,
     githubLink,
-    projectDetails,
   } = project;
-
-  const [showProjectDetails, setShowProjectDetails] = useState(false);
-
-  const toggleProjectDetails = () => {
-    setShowProjectDetails((prev) => !prev);
-  };
 
   return (
     <article className="project-card">
@@ -80,18 +73,10 @@ function ProjectCard({ project, onImageClick }) {
           </a>
         )}
 
-        {projectDetails && (
-          <button
-            type="button"
-            className="project-link secondary project-button"
-            onClick={toggleProjectDetails}
-          >
-            {showProjectDetails ? "Hide Details" : "More About This Project"}
-          </button>
-        )}
+        <Link to={`/projects/${slug}`} className="project-link secondary">
+          View Project
+        </Link>
       </div>
-
-      {showProjectDetails && <ProjectDetails projectDetails={projectDetails} />}
     </article>
   );
 }

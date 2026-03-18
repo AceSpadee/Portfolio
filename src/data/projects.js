@@ -3,11 +3,31 @@ import musicAppThumb from "../assets/musicapp-thumb.png";
 import locationAppThumb from "../assets/locationapp-thumb.png";
 import cloudStorageThumb from "../assets/cloudstorage-thumb.png";
 
+import rooftopcatshot2 from "../assets/rooftopcatshot2.png";
+import rooftopcatshot3 from "../assets/rooftopcatshot3.png";
+import musicappshot2 from "../assets/musicappshot2.png";
+import musicappshot3 from "../assets/musicappshot3.png";
+
 const projects = [
   {
     title: "Rooftop Cat",
+    slug: "rooftop-cat",
     status: "Public Project",
     image: rooftopCatThumb,
+    images: [
+      {
+        src: rooftopCatThumb,
+        alt: "Screenshot of Rooftop Cat game",
+      },
+      {
+        src: rooftopcatshot2,
+        alt: "Screenshot of Rooftop Cat game",
+      },
+      {
+        src: rooftopcatshot3,
+        alt: "Screenshot of Rooftop Cat game",
+      },
+    ],
     alt: "Screenshot of Rooftop Cat game",
     description:
       "A fast-paced rooftop endless runner inspired by the Chrome dinosaur game, featuring obstacle dodging, neon city visuals, and responsive browser-based gameplay.",
@@ -39,8 +59,23 @@ const projects = [
   },
   {
     title: "Music App",
+    slug: "music-app",
     status: "Live Preview • Private Code",
     image: musicAppThumb,
+    images: [
+      {
+        src: musicAppThumb,
+        alt: "Screenshot of the music app interface",
+      },
+      {
+        src: musicappshot2,
+        alt: "Screenshot of the music app playlist",
+      },
+      {
+        src: musicappshot3,
+        alt: "Screenshot of the music app themes",
+      },
+    ],
     alt: "Screenshot of the music app interface",
     description:
       "A modern music app focused on playlist management, playback controls, and polished UI interactions designed to feel smooth and responsive.",
@@ -71,8 +106,15 @@ const projects = [
   },
   {
     title: "Location Tracking App",
+    slug: "location-tracking-app",
     status: "Private Project",
     image: locationAppThumb,
+    images: [
+      {
+        src: locationAppThumb,
+        alt: "Screenshot of the location tracking application map",
+      },
+    ],
     alt: "Screenshot of the location tracking application map",
     description:
       "A full-stack location tracking app that lets authenticated users save locations, view them on an interactive map, and track movement sessions over time.",
@@ -102,8 +144,15 @@ const projects = [
   },
   {
     title: "Cloud Storage App",
+    slug: "cloud-storage-app",
     status: "Private Project",
     image: cloudStorageThumb,
+    images: [
+      {
+        src: cloudStorageThumb,
+        alt: "Screenshot of the cloud storage app dashboard",
+      },
+    ],
     alt: "Screenshot of the cloud storage app dashboard",
     description:
       "A self-hosted cloud storage platform built for file uploads, organization, and scalable file handling through a custom web interface.",
